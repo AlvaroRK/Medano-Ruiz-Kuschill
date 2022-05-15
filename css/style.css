@@ -1,0 +1,638 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+#grid{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+
+    grid-template-rows: 10vh 100% 15vh; 
+    grid-template-columns: auto;
+}
+
+
+
+
+/* -----HEADER----- */
+
+
+
+#inicio{
+
+
+    grid-area: header;
+
+
+    background-image: linear-gradient(to right, rgb(255, 193, 193), rgb(255, 255, 255));
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.logo img{
+    width: 160px;
+}
+
+
+/*---NAV---*/
+
+.nav{
+    width: max-content;
+}
+
+.nav ul{
+    display: flex; 
+}
+
+.nav ul li{
+    list-style: none;
+    margin: 0 5px;
+    width: max-content;
+}
+
+.nav ul li a{
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 18px;
+    color: rgb(255, 100, 100);
+    padding: 10px 15px;
+}
+
+.nav ul li a:hover{
+    background-color: rgb(255, 130, 130);
+    transition: all .2s;
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+
+.nav ul li #button{
+    padding: 10px 15px;
+    border: none;
+    background:rgb(255, 130, 130);
+    color: #fff;
+    border-radius: 20px;
+}
+
+
+.bars{
+    display:none;
+}
+
+
+
+
+/* <-----Main-----> */
+
+
+
+
+.main{
+    grid-area: main;
+    width: 100%;
+    position: relative;
+}
+
+.main__section{
+    background-color: rgb(158, 158, 158);;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+
+.main__section img{
+    width: 100%;
+    min-height: 200px;
+    max-height: 600px;
+}
+
+
+.box-p{
+    height: auto;
+    display: flex;
+}
+
+.box-p p{
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+}
+
+
+
+/* main__section2 */
+
+
+
+.main__section2{
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.main__section2 h1{
+    text-align: center;
+    padding-top: 50px;
+    text-transform: uppercase;
+}
+
+.container_products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.product{
+    width: 380px;
+    margin: 10px;
+    border: 2px solid black;
+    text-align: center;
+}
+
+.product:hover{
+    transform: scale(1.05);
+    transition: all .2s;
+}
+
+
+.product img{
+    width: 300px;
+    height: 300px;
+    padding: 10px;
+    border-bottom: 1px solid black;
+}
+
+.product h3{
+    margin: 15px 0;
+}
+
+.product p{
+    padding: 0 20px 20px 20px;
+}
+
+.main__section2 button{
+    display: block;
+    margin: 100px auto 0px auto;
+    background-color: rgb(255, 100, 100);
+    border: none;
+    border-radius: 25px;
+    padding: 10px 15px;
+}
+
+.main__section2 button:hover{
+    transform: scale(1.1);
+    transition: all .2s;
+}
+
+.main__section2 button a{
+    text-decoration: none;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+}
+
+
+
+/* <-----Footer------> */
+
+
+
+
+
+.footer{
+    grid-area: footer;
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    bottom: 0;
+    background-color: rgb(46, 46, 46);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.footer p{
+    color: #fff;
+    padding: 25px;
+}
+
+
+
+.icons a{
+    color: #fff;
+    font-size: 24px;
+    margin: 0 10px;
+}
+
+
+.footer button{
+    background-color: rgb(255, 255, 255);
+    height: 35px;
+    justify-content: end;
+    border-radius: 25px;
+    border: none;
+    padding: 8px 0px ;
+}
+
+.footer button a{
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    padding: 0 10px;
+}
+
+
+
+
+/* Acá empieza el css de servicios */
+
+
+
+.main__services{
+   background-color: rgb(255, 255, 255);
+}
+
+.services{
+   text-align: center;
+}
+
+.services h1{
+    padding-top: 30px;
+    margin-bottom:20px;
+    text-decoration: underline;
+    font-size: 36px;
+}
+
+.services__container h2,h3{
+    margin: 50px 0;
+}
+
+
+.materiales{
+    margin: 30px 300px;
+}
+
+.equipamiento{
+    margin: 0 300px;
+}
+
+.equipamiento__equipos{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.equipos h3{
+    margin: 20px 0 10px 0;
+}
+
+
+.ingenieria{
+    margin: 40px 300px;
+}
+
+.ingenieria__containers{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.container{
+    margin-bottom: 50px;
+}
+
+.container h3{
+    margin: 20px 0 10px 0;
+}
+
+
+
+
+/* Acá empieza el css de nosotros */
+
+
+
+.main__nosotros{
+    height: 50vh;
+}
+
+.presentacion1{
+    text-align: center;
+    border-bottom: 2px solid black;
+}
+
+.presentacion1 img{
+    width: 100%;
+    height: 500px;
+}
+
+.presentacion2{
+    display: flex;
+    justify-content: center;
+}
+
+.presentacion2 h1{
+    margin: 20px 0;
+}
+
+
+
+/*Acá empieza el css de productos*/
+
+
+.main__products{
+    height: auto;
+}
+
+.main__products__s1{
+    display: flex;
+    flex-direction: column;
+    
+  
+    background-color: antiquewhite;
+}
+
+.main__products__s1 h1{
+    margin: 20px auto;
+}
+
+.carrusel img{
+    width: 100%;
+    max-height:600px ;
+}
+
+.carrusel i {
+    cursor: pointer;
+    align-content: center;
+}
+
+
+.todos_los_productos{
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.main__products__s2{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.products{
+    display: flex;
+    flex-direction: column;
+    width:30rem;
+    margin: 10px 10px;
+    border: 1px solid rgb(183, 183, 183);
+    border-radius: 20px;
+}
+
+.products img{
+    padding: 10px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.products h3{
+    text-align: center;
+    margin: 5px 0;
+}
+
+.products p{
+    text-align: center;
+    padding: 0 40px;
+}
+
+.prices{
+    text-align: center;
+    margin: 10px 0;
+}
+
+
+
+
+/* Acá empieza el css de contacto */
+
+
+
+
+.main__contact{
+    display: flex;
+    justify-content: space-evenly;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.form_1{
+    margin: auto;
+    border: 3px solid rgb(0, 0, 0);
+    width: 37%;
+    height: 90%;
+}
+
+.form_1 h2{
+    text-align: center;
+    margin: 50px 0;
+    text-decoration: underline;
+}
+
+.form_1 div{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.input{
+    line-height: 24px;
+    font-size: 100%;
+    width: 60%;
+}
+
+.form_1 div textarea{
+    width: 40%;
+    height: 20%;
+    max-width: 90%;
+    min-width: 60%;
+    max-height: 280px;
+    min-height: 200px;
+    line-height: 24px;
+    font-size: 100%;
+    overflow: auto;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    height: 30px;
+}
+
+.button__input{
+    border-radius: 25px;
+    width: 15%;
+    margin: 0 30px;
+    font-size: 16px;
+}
+
+.form_2{
+    margin: auto;
+    border: 3px solid rgb(0, 0, 0);
+    width: 37%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+    align-items: center;
+}
+
+.form_2 h2{
+    text-decoration: underline;
+    margin: 50px 0;
+}
+
+.form_2 div{
+    margin: 15px 0;
+}
+
+.iframe{
+    width:100%;
+    height: 50%;
+    text-align: center;
+}
+
+.iframe iframe{
+    width: 80%;
+    height: 100%;
+}
+
+
+
+
+
+
+/* Aca empiezan las media querys */
+
+@media only screen and (max-width:810px) {
+    .nav{
+        display: none;
+    }
+
+    .bars{
+        display: block;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        font-size: 30px;
+        cursor: pointer;
+        border: none;
+        background: none;
+    }
+    
+    .bars i{
+        color: red;
+        
+    }
+
+
+
+    /* Medias de services */
+
+    .materiales{
+        margin:25px 0;
+    }
+
+    .equipamiento{
+        margin: 25px 0;
+    }
+
+    .ingenieria{
+        margin: 50px 0 25px 0;
+    }
+
+
+
+    /* Medias de About us */
+
+
+    .main__nosotros{
+        height: 100%;
+    }
+
+    .presentacion1 img{
+        height: auto;
+    }
+
+
+    /* Medias de contact */
+
+
+    .form_2{
+        width: 90%;
+        height: auto;
+    }
+
+    .main__contact{
+        height: 100%;
+    }
+    
+    .form_1{
+        width: 90%;
+        height: auto;
+    }
+    
+    .input{
+        width: 70%;
+    }
+    
+    .form_1 div textarea{
+        width: 70%;
+        height: 20%;
+        min-width: 70%;
+        max-height: 200px;
+        min-height: 150px;
+    }
+    
+  
+    
+    .button__input{
+        width: 25%;
+    }
+    
+    .form_2{
+        margin: 20px;
+        border: 3px solid rgb(0, 0, 0);
+        width: 90%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+
+
+}
+
+
+@media only screen and (max-width:475px) {
+    .nav{
+        display: none;
+    }
+
+    .bars{
+        display: block;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        font-size: 30px;
+        cursor: pointer;
+        border: none;
+        background: none;
+    }
+    
+    .bars i{
+        color: red;
+        
+    }
+}
