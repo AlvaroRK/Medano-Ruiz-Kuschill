@@ -1,0 +1,279 @@
+@import "base/reset";
+
+
+@import "layout/footer";
+@import "layout/grid";
+@import "layout/header";
+
+
+@import "mediasQ/mediaQ";
+
+
+@import "utilities/variables";
+
+
+@import "views/contact";
+
+
+
+
+
+
+/* <-----Main-----> */
+
+.main{
+    // grid-area: main;
+    width: 100%;
+    position: relative;
+
+    .main__section{
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+
+        img{
+            width: 100%;
+            min-height: 200px;
+            max-height: 600px;
+        }
+    }
+
+
+    /* main__section2 */
+
+    .main__section2{
+        position: relative;
+        flex-wrap: wrap;
+
+        h1{
+            text-align: center;
+            padding-top: 50px;
+            text-transform: uppercase;
+        }
+
+
+        .container_products{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        button{
+            display: block;
+            margin: 100px auto 0px auto;
+            background-color: rgb(255, 100, 100);
+            border: none;
+            border-radius: 25px;
+            padding: 10px 15px;
+
+            &:hover{
+                transform: scale(1.1);
+                transition: all .2s;
+            }
+
+            a{
+                text-decoration: none;
+                font-size: 22px;
+                color: rgb(255, 255, 255);
+            }
+        }
+    }
+}
+
+.size{
+    width: 100%;
+}
+
+
+/* Acá empieza el css de servicios */
+
+
+
+.main__services{
+    background-image: url(../img/bg.png);
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .services{
+        text-align: center;
+
+        h1{
+            padding-top: 30px;
+            margin-bottom:20px;
+            text-decoration: underline;
+            font-size: 36px;
+        }
+
+        .services__container{
+
+            h2,h3{
+                margin: 50px 0;
+            }
+        }
+    }
+}
+
+
+.materiales{
+    margin: 30px 300px;
+}
+
+.equipamiento{
+    margin: 40px 300px;
+}
+
+.equipamiento__equipos{
+    display: flex;
+    justify-content: space-evenly;
+
+    .equipos{
+
+        h3{
+            margin: 20px 0 10px 0;
+        }
+    }
+}
+
+ 
+
+.ingenieria{
+    margin: 40px 300px;
+}
+
+.ingenieria__containers{
+    display: flex;
+    justify-content: space-evenly;
+
+    .container{
+        margin-bottom: 50px;
+
+        h3{
+            margin: 20px 0 10px 0;
+        }
+    }
+}
+
+/* Acá empieza el css de nosotros */
+
+.main__nosotros{
+    height: 50vh;
+
+    .presentacion1{
+        text-align: center;
+        height: 500px;
+        min-height: auto;
+        overflow: hidden;
+
+        img{
+            width: 100%;
+            box-sizing: border-box;
+            background-repeat: no-repeat;
+            background-size: cover;
+        
+        }
+    }
+
+
+    .presentacion2{
+        display: flex;
+        justify-content: center;
+
+        h1{
+            margin: 20px 0 0 0;
+        }
+    }
+}
+
+/*Acá empieza el css de productos*/
+
+
+.main__products{
+    height: auto;
+
+    .main__products__s1{
+        display: flex;
+        flex-direction: column;
+
+        h1{
+            margin: 20px auto;
+        }
+
+        .carrusel{
+
+            img{
+                width: 100%;
+                max-height:600px ;
+            }
+
+            i {
+                cursor: pointer;
+                align-content: center;
+            }
+        }
+    }
+
+    .todos_los_productos{
+        margin: 20px 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    .main__products__s2{
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+
+        .products{
+            display: flex;
+            flex-direction: column;
+            height: 600px;
+            width:30rem;
+            margin: 10px 10px;
+            border: 1px solid rgb(183, 183, 183);
+            border-radius: 20px;
+
+            &:hover{
+                transform: scale(1.05);
+                transition: all 0.2s;
+                box-shadow: 2px 2px 40px 1px;
+            }
+
+            img{
+                padding: 10px;
+                width: 100%;
+                margin: 0 auto;
+                height: 350px;
+            }
+
+            h3{
+                text-align: center;
+                margin: 5px 0;
+            }
+
+            p{
+                text-align: center;
+                padding: 0 40px;
+            }
+
+
+            .prices{
+                text-align: center;
+                margin: 10px 0;
+
+                button{
+                    background-color: rgb(0, 255, 0);
+                    color: #fff  ;
+                    padding: 10px;
+                    border-radius: 20px;
+                    border: none;
+
+                    &:hover{
+                        background-color: rgb(0, 216, 0);
+                        transition: all .5s;
+                    }
+                }
+            }
+        }
+    }
+}

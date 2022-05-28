@@ -1,0 +1,10 @@
+#grid{
+    display: grid;
+    grid-template-areas: 
+    "header"
+    "main"
+    "footer";
+
+    grid-template-rows: 10vh 100% 15vh; 
+    grid-template-columns: auto;
+}
