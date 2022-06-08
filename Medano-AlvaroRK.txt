@@ -1,0 +1,33 @@
+
+    HTML
+Hice unas correcciones de codigo, cambie algunas img y les agregue un loading="lazy"
+
+
+
+En el INDEX agregue:
+<meta name="keywords" content="Fibra de vidrio, Masilla, Gelcoats, Plástico reforzado, FRP, Resinas, Diluyentes">
+<meta name="description" content="Somos Medano, una empresa con más de 44 años en el mercado del FRP que asiste y brinda servicios a numerosas empresas de 1.º nivel.">
+
+En los SERVICIOS agregue:
+<meta name="keywords" content="Fibra de vidrio, Masilla, Gelcoats, Plástico reforzado, FRP, Resinas, Diluyentes">
+<meta name="description" content="Contamos con distintos servicios ya sea que busca un cierto material o equipamiento, también brindamos asistencia técnica.">
+
+En la sección NOSOTROS agregue:
+<meta name="keywords" content="Fibra de vidrio, Masilla, Gelcoats, Plástico reforzado, FRP, Resinas, Diluyentes">
+<meta name="description" content="Nos centramos en la producción y distribución de materiales compuestos por fibra de vidrios.">
+
+En los PRODUCTOS agregue:
+<meta name="keywords" content="Fibra de vidrio, Masilla, Gelcoats, Plástico reforzado, FRP, Resinas, Diluyentes">
+<meta name="description" content="Contamos con todo tipo de productos y si no encuentra el que necesita puede consultarnos si podemos hacer el producto que está necesitando.">
+
+En en CONTACTO agregue:
+<meta name="keywords" content="Fibra de vidrio, Masilla, Gelcoats, Plástico reforzado, FRP, Resinas, Diluyentes">
+<meta name="description" content="Contáctenos y le responderemos su consulta a la brevedad.">
+
+
+   CSS/SCSS
+
+Correcciones de codigo generales y agregue nuevas fuentes, paleta de colores e intenté mejorar el responsive.
+
+En el archivo _mixins.scss agregue un mixin y lo use para la seccion servicios
+Agregue un mapa en _variables.scss que lo use en la parte de productos y puse un extend
