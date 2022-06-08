@@ -1,18 +1,18 @@
-@import "base/reset";
+@import 'utilities/variables';
+@import 'utilities/functions';
+@import 'utilities/mixins';
 
+@import 'mediasQ/mediaQ';
 
-@import "layout/footer";
-@import "layout/grid";
-@import "layout/header";
+@import 'base/reset';
 
+@import 'layout/grid';
+@import 'layout/header';
+@import 'layout/footer';
 
-@import "mediasQ/mediaQ";
+@import 'components/buttons';
 
-
-@import "utilities/variables";
-
-
-@import "views/contact";
+@import 'views/contact';
 
 
 
@@ -22,7 +22,7 @@
 /* <-----Main-----> */
 
 .main{
-    // grid-area: main;
+    grid-area: main;
     width: 100%;
     position: relative;
 
@@ -49,6 +49,8 @@
             text-align: center;
             padding-top: 50px;
             text-transform: uppercase;
+            font-family: $oswald;
+            font-weight: bold;
         }
 
 
@@ -84,103 +86,123 @@
     width: 100%;
 }
 
+.t-card{
+    font-family: $oswald;
+    font-weight: 700;
+}
 
 /* Acá empieza el css de servicios */
 
 
-
 .main__services{
-    background-image: url(../img/bg.png);
-    box-sizing: border-box;
-    background-repeat: no-repeat;
-    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 65vh;
+
+    li{
+        list-style: none;
+    }
+
+    svg{
+        position: absolute;
+        width: 100%;
+        bottom: 100px;
+        z-index: -10;
+    }
 
     .services{
         text-align: center;
+        z-index: 100;
 
         h1{
-            padding-top: 30px;
-            margin-bottom:20px;
+            margin:20px 0;
             text-decoration: underline;
             font-size: 36px;
+            font-family: $oswald;
+            font-weight: 700;
+            color: $rojoFuerte;
         }
 
         .services__container{
-
-            h2,h3{
-                margin: 50px 0;
+            h2, h3{
+                margin: 25px 0;
+                z-index: 1002;
             }
         }
     }
-}
 
+    .cont-section{
 
-.materiales{
-    margin: 30px 300px;
-}
+        width: 60%;
+        text-align: center;
+        @include flex(column, nowrap, center, auto);
+        
 
-.equipamiento{
-    margin: 40px 300px;
-}
+        .equipos{
+            position: relative;
+        }
 
-.equipamiento__equipos{
-    display: flex;
-    justify-content: space-evenly;
+        .c-btn{
+            background-color: $rojoClaro;
+            font-family: $openSans;
+            font-weight: bold;
+        }
 
-    .equipos{
+    } 
 
-        h3{
-            margin: 20px 0 10px 0;
+     
+
+    @media screen and (max-width:992px) {
+
+            svg{
+                position: absolute;
+                bottom: 280px;
+                width: 100%;
+            }
+        
+
+        .cont-section{
+            width: 90%;
         }
     }
-}
 
- 
-
-.ingenieria{
-    margin: 40px 300px;
-}
-
-.ingenieria__containers{
-    display: flex;
-    justify-content: space-evenly;
-
-    .container{
-        margin-bottom: 50px;
-
-        h3{
-            margin: 20px 0 10px 0;
-        }
-    }
 }
 
 /* Acá empieza el css de nosotros */
 
 .main__nosotros{
-    height: 50vh;
 
     .presentacion1{
-        text-align: center;
-        height: 500px;
-        min-height: auto;
-        overflow: hidden;
-
-        img{
+        .img-box{
             width: 100%;
-            box-sizing: border-box;
-            background-repeat: no-repeat;
-            background-size: cover;
-        
+            height: auto;
+            max-height: 600px;
+            overflow: hidden;
+
+            img{
+                width: 100%;
+                position: relative;
+            }
         }
     }
 
 
-    .presentacion2{
-        display: flex;
-        justify-content: center;
 
+    .presentacion2{
+        position: relative;
+        bottom: 0;
+            
         h1{
-            margin: 20px 0 0 0;
+            font-family: $oswald;
+            font-weight: bold;
+            text-align: center;
+            background: none;
+            margin: 10px 0;
+        }
+
+        .t-presentacion2{
+            text-align: center;
         }
     }
 }
@@ -197,6 +219,8 @@
 
         h1{
             margin: 20px auto;
+            font-family: $oswald;
+            font-weight: bold;
         }
 
         .carrusel{
@@ -217,26 +241,33 @@
         margin: 20px 0;
         display: flex;
         justify-content: center;
+
+        h2{
+            font-family: $oswald;
+            font-weight: 400;
+            font-size: 40px;
+        }
     }
 
     .main__products__s2{
         display: flex;
-        justify-content: space-around;
         flex-wrap: wrap;
+        justify-content: space-around;
+
 
         .products{
             display: flex;
             flex-direction: column;
-            height: 600px;
-            width:30rem;
-            margin: 10px 10px;
-            border: 1px solid rgb(183, 183, 183);
-            border-radius: 20px;
+            height:map-get($products, h );
+            width:map-get($products, w );
+            margin: map-get($products, m );
+            border: map-get($products, b );
+            border-radius: map-get($products, b-r );
 
             &:hover{
-                transform: scale(1.05);
+                transform: scale(1.02);
                 transition: all 0.2s;
-                box-shadow: 2px 2px 40px 1px;
+                box-shadow: 2px 2px 20px .6px;
             }
 
             img{
@@ -258,20 +289,28 @@
 
 
             .prices{
-                text-align: center;
-                margin: 10px 0;
+                @extend h3;
+                margin: 5px auto;
+                width: max-content;
+                overflow: hidden;
 
                 button{
-                    background-color: rgb(0, 255, 0);
+                    background-color: rgb(0, 236, 0);
+                    border-radius: 25px;
                     color: #fff  ;
                     padding: 10px;
-                    border-radius: 20px;
                     border: none;
 
                     &:hover{
-                        background-color: rgb(0, 216, 0);
+                        background-color: rgb(0, 208, 0);
                         transition: all .5s;
                     }
+                }
+
+                input{
+                    margin: 0;
+                    width: 60px;
+                    font-size: 20px;
                 }
             }
         }

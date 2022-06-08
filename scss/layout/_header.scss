@@ -1,8 +1,7 @@
-@import "../utilities/variables";
 /* -----HEADER----- */
 
 #inicio{
-    // grid-area: header;
+    grid-area: header;
 
     background-image:$gradHeader ;
     display: flex;
@@ -23,21 +22,24 @@
 
         ul{
             display: flex;
+            margin: auto;
 
             li{
                 list-style: none;
                 margin: 0 5px;
                 width: max-content;
-
+                
                 a{
                     text-decoration: none;
                     text-transform: uppercase;
-                    font-size: 18px;
-                    color: rgb(255, 100, 100);
+                    font-size: 20px;
+                    color: $rojoClaro;
                     padding: 10px 15px;
+                    font-family:$oswald;
+                    font-weight:600;
 
                     &:hover{
-                        background-color: rgb(255, 130, 130);
+                        background-color: $rojoClaro;
                         transition: all .2s;
                         color: rgb(255, 255, 255);
                         border-radius: 20px;
@@ -47,7 +49,7 @@
                 #button{
                     padding: 10px 15px;
                     border: none;
-                    background:rgb(255, 130, 130);
+                    background:$rojoClaro;
                     color: #fff;
                     border-radius: 20px;
                 }

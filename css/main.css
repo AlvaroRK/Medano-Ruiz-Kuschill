@@ -1,19 +1,114 @@
 @charset "UTF-8";
+/* Aca empiezan las media querys */
+@media only screen and (max-width: 992px) {
+  .nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .cont-section {
+    width: 100%;
+  }
+}
+
 * {
   padding: 0;
   margin: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Open Sans", sans-serif;
+}
+
+#grid {
+  display: -ms-grid;
+  display: grid;
+      grid-template-areas: "header" "main" "footer";
+  -ms-grid-rows: 10vh 100% 0;
+      grid-template-rows: 10vh 100% 0;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+}
+
+/* -----HEADER----- */
+#inicio {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: header;
+  background-image: -webkit-gradient(linear, left top, right top, from(#ffc1c1), to(white));
+  background-image: linear-gradient(to right, #ffc1c1, white);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*---NAV---*/
+}
+
+#inicio .logo img {
+  width: 160px;
+}
+
+#inicio .nav {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+#inicio .nav ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+}
+
+#inicio .nav ul li {
+  list-style: none;
+  margin: 0 5px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+}
+
+#inicio .nav ul li a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 20px;
+  color: #ff7673;
+  padding: 10px 15px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+}
+
+#inicio .nav ul li a:hover {
+  background-color: #ff7673;
+  -webkit-transition: all .2s;
+  transition: all .2s;
+  color: white;
+  border-radius: 20px;
+}
+
+#inicio .nav ul li #button {
+  padding: 10px 15px;
+  border: none;
+  background: #ff7673;
+  color: #fff;
+  border-radius: 20px;
 }
 
 /* <-----Footer------> */
 .footer {
+  -ms-grid-row: 3;
+  -ms-grid-column: 1;
+  grid-area: footer;
   position: relative;
   width: 100%;
   height: 15vh;
   bottom: 0;
-  background-color: #2e2e2e;
+  background-color: #404040;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -56,146 +151,6 @@
   padding: 0 10px;
 }
 
-#grid {
-  display: -ms-grid;
-  display: grid;
-      grid-template-areas: "header" "main" "footer";
-  -ms-grid-rows: 10vh 100% 15vh;
-      grid-template-rows: 10vh 100% 15vh;
-  -ms-grid-columns: auto;
-      grid-template-columns: auto;
-}
-
-/* -----HEADER----- */
-#inicio {
-  background-image: -webkit-gradient(linear, left top, right top, from(#ffc1c1), to(white));
-  background-image: linear-gradient(to right, #ffc1c1, white);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  /*---NAV---*/
-}
-
-#inicio .logo img {
-  width: 160px;
-}
-
-#inicio .nav {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
-
-#inicio .nav ul {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-#inicio .nav ul li {
-  list-style: none;
-  margin: 0 5px;
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
-}
-
-#inicio .nav ul li a {
-  text-decoration: none;
-  text-transform: uppercase;
-  font-size: 18px;
-  color: #ff6464;
-  padding: 10px 15px;
-}
-
-#inicio .nav ul li a:hover {
-  background-color: #ff8282;
-  -webkit-transition: all .2s;
-  transition: all .2s;
-  color: white;
-  border-radius: 20px;
-}
-
-#inicio .nav ul li #button {
-  padding: 10px 15px;
-  border: none;
-  background: #ff8282;
-  color: #fff;
-  border-radius: 20px;
-}
-
-/* Aca empiezan las media querys */
-@media only screen and (max-width: 992px) {
-  .nav {
-    display: none;
-  }
-  /* Medias de services */
-  .materiales {
-    margin: 25px 0;
-  }
-  .equipamiento {
-    margin: 25px 0;
-  }
-  .ingenieria {
-    margin: 50px 0 25px 0;
-  }
-  /* Medias de About us */
-  .main__nosotros {
-    height: 100%;
-  }
-  .main__nosotros .presentacion1 img {
-    height: auto;
-  }
-  /* Medias de contact */
-  .form_2 {
-    width: 90%;
-    height: auto;
-  }
-  .main__contact {
-    height: 100%;
-  }
-  .form_1 {
-    width: 90%;
-    height: auto;
-  }
-  .input {
-    width: 70%;
-  }
-  .form_1 div textarea {
-    width: 70%;
-    height: 20%;
-    min-width: 70%;
-    max-height: 200px;
-    min-height: 150px;
-  }
-  .button__input {
-    width: 25%;
-  }
-  .form_2 {
-    margin: 20px;
-    border: 3px solid black;
-    width: 90%;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: space-evenly;
-        -ms-flex-pack: space-evenly;
-            justify-content: space-evenly;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
 /* Acá empieza el css de contacto */
 .main__contact {
   display: -webkit-box;
@@ -207,6 +162,11 @@
   height: 100%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.main__contact h2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
 }
 
 .iframe {
@@ -222,6 +182,9 @@
 
 /* <-----Main-----> */
 .main {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: main;
   width: 100%;
   position: relative;
   /* main__section2 */
@@ -249,6 +212,8 @@
   text-align: center;
   padding-top: 50px;
   text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
 }
 
 .main .main__section2 .container_products {
@@ -288,103 +253,121 @@
   width: 100%;
 }
 
+.t-card {
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+}
+
 /* Acá empieza el css de servicios */
 .main__services {
-  background-image: url(../img/bg.png);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-repeat: no-repeat;
-  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 65vh;
+}
+
+.main__services li {
+  list-style: none;
+}
+
+.main__services svg {
+  position: absolute;
+  width: 100%;
+  bottom: 100px;
+  z-index: -10;
 }
 
 .main__services .services {
   text-align: center;
+  z-index: 100;
 }
 
 .main__services .services h1 {
-  padding-top: 30px;
-  margin-bottom: 20px;
+  margin: 20px 0;
   text-decoration: underline;
   font-size: 36px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 700;
+  color: #ff0400;
 }
 
-.main__services .services .services__container h2, .main__services .services .services__container h3 {
-  margin: 50px 0;
+.main__services .services .services__container h2, .main__services .services .services__container h3, .main__services .services .services__container .main__products .main__products__s2 .products .prices, .main__products .main__products__s2 .products .main__services .services .services__container .prices {
+  margin: 25px 0;
+  z-index: 1002;
 }
 
-.materiales {
-  margin: 30px 300px;
-}
-
-.equipamiento {
-  margin: 40px 300px;
-}
-
-.equipamiento__equipos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.equipamiento__equipos .equipos h3 {
-  margin: 20px 0 10px 0;
-}
-
-.ingenieria {
-  margin: 40px 300px;
-}
-
-.ingenieria__containers {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-}
-
-.ingenieria__containers .container {
-  margin-bottom: 50px;
-}
-
-.ingenieria__containers .container h3 {
-  margin: 20px 0 10px 0;
-}
-
-/* Acá empieza el css de nosotros */
-.main__nosotros {
-  height: 50vh;
-}
-
-.main__nosotros .presentacion1 {
+.main__services .cont-section {
+  width: 60%;
   text-align: center;
-  height: 500px;
-  min-height: auto;
-  overflow: hidden;
-}
-
-.main__nosotros .presentacion1 img {
-  width: 100%;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.main__nosotros .presentacion2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display-f: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column nowrap;
+          flex-flow: column nowrap;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: auto;
+      -ms-flex-align: auto;
+          align-items: auto;
+}
+
+.main__services .cont-section .equipos {
+  position: relative;
+}
+
+.main__services .cont-section .c-btn {
+  background-color: #ff7673;
+  font-family: "Open Sans", sans-serif;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 992px) {
+  .main__services svg {
+    position: absolute;
+    bottom: 280px;
+    width: 100%;
+  }
+  .main__services .cont-section {
+    width: 90%;
+  }
+}
+
+/* Acá empieza el css de nosotros */
+.main__nosotros .presentacion1 .img-box {
+  width: 100%;
+  height: auto;
+  max-height: 600px;
+  overflow: hidden;
+}
+
+.main__nosotros .presentacion1 .img-box img {
+  width: 100%;
+  position: relative;
+}
+
+.main__nosotros .presentacion2 {
+  position: relative;
+  bottom: 0;
 }
 
 .main__nosotros .presentacion2 h1 {
-  margin: 20px 0 0 0;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
+  text-align: center;
+  background: none;
+  margin: 10px 0;
+}
+
+.main__nosotros .presentacion2 .t-presentacion2 {
+  text-align: center;
 }
 
 /*Acá empieza el css de productos*/
@@ -404,6 +387,8 @@
 
 .main__products .main__products__s1 h1 {
   margin: 20px auto;
+  font-family: "Oswald", sans-serif;
+  font-weight: bold;
 }
 
 .main__products .main__products__s1 .carrusel img {
@@ -427,14 +412,20 @@
           justify-content: center;
 }
 
+.main__products .todos_los_productos h2 {
+  font-family: "Oswald", sans-serif;
+  font-weight: 400;
+  font-size: 40px;
+}
+
 .main__products .main__products__s2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
 }
 
 .main__products .main__products__s2 .products {
@@ -453,12 +444,12 @@
 }
 
 .main__products .main__products__s2 .products:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
-  -webkit-box-shadow: 2px 2px 40px 1px;
-          box-shadow: 2px 2px 40px 1px;
+  -webkit-box-shadow: 2px 2px 20px .6px;
+          box-shadow: 2px 2px 20px .6px;
 }
 
 .main__products .main__products__s2 .products img {
@@ -468,7 +459,7 @@
   height: 350px;
 }
 
-.main__products .main__products__s2 .products h3 {
+.main__products .main__products__s2 .products h3, .main__products .main__products__s2 .products .prices {
   text-align: center;
   margin: 5px 0;
 }
@@ -479,20 +470,29 @@
 }
 
 .main__products .main__products__s2 .products .prices {
-  text-align: center;
-  margin: 10px 0;
+  margin: 5px auto;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  overflow: hidden;
 }
 
 .main__products .main__products__s2 .products .prices button {
-  background-color: lime;
+  background-color: #00ec00;
+  border-radius: 25px;
   color: #fff;
   padding: 10px;
-  border-radius: 20px;
   border: none;
 }
 
 .main__products .main__products__s2 .products .prices button:hover {
-  background-color: #00d800;
+  background-color: #00d000;
   -webkit-transition: all .5s;
   transition: all .5s;
+}
+
+.main__products .main__products__s2 .products .prices input {
+  margin: 0;
+  width: 60px;
+  font-size: 20px;
 }

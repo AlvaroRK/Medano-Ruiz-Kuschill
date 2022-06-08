@@ -1,6 +1,28 @@
 
+$gradHeader: linear-gradient(to right, #ffc1c1, rgb(255, 255, 255));
+$colorFooter:#404040;
 
-$gradHeader: linear-gradient(to right, rgb(255, 193, 193), rgb(255, 255, 255));
+// PALETA DE COLORES
+    $rojoFuerte:#ff0400;
+    $rojoMedio:#ff3936;
+    $rojoClaro:#ff7673;
+    $negroFuerte:#191919;
+    $negroClaro:#404040;
 
 
-$colorFooter:rgb(46, 46, 46);
+// FUENTES/TIPOGRAFIAS
+
+$oswald:'Oswald', sans-serif;
+$openSans:'Open Sans', sans-serif;
+
+
+
+// MAPA
+
+$products:(
+    h: 600px,
+    w:30rem,
+    m:10px 10px,
+    b:1px solid rgb(183, 183, 183),
+    b-r:20px
+);
