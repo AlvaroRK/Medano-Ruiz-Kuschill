@@ -23,3 +23,9 @@
         height: 100%;
     }
 }
+
+.t-area{
+    min-height: 100px;
+    max-height: 300px;
+    overflow: auto;
+}

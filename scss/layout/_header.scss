@@ -1,8 +1,7 @@
 /* -----HEADER----- */
 
 #inicio{
-    grid-area: header;
-
+    padding: 1em;
     background-image:$gradHeader ;
     display: flex;
     justify-content: space-around;
