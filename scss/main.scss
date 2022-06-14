@@ -1,8 +1,6 @@
 @import 'utilities/variables';
 @import 'utilities/mixins';
 
-@import 'mediasQ/mediaQ';
-
 @import 'base/reset';
 
 @import 'layout/header';
@@ -12,7 +10,7 @@
 
 @import 'views/contact';
 
-
+@import 'mediasQ/mediaQ';
 
 
 
@@ -95,7 +93,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 75.1vh;
+    height: auto;
 
     li{
         list-style: none;
@@ -123,11 +121,13 @@
 
         .services__container{
             h2, h3{
-                margin: 25px 0;
+                margin: 10px 0;
                 z-index: 1002;
             }
         }
     }
+
+    
 
     .cont-section{
 
@@ -138,6 +138,7 @@
 
         .equipos{
             position: relative;
+            margin-bottom: 57.7px;
         }
 
         .c-btn{
@@ -145,30 +146,47 @@
             font-family: $openSans;
             font-weight: bold;
         }
-
     } 
-
-     
 
     @media screen and (max-width:992px) {
 
-            svg{
-                position: absolute;
-                bottom: 280px;
-                width: 100%;
-            }
-        
-
+        svg{
+            position: absolute;
+            bottom: 280px;
+            width: 100%;
+        }
+        padding: 1em;
+    
+    
         .cont-section{
-            width: 90%;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: .5em;
+
+            .materiales{
+                width: 100%;
+                text-align: left;
+            }
+
+            .equipamiento{
+                width: 100%;
+                text-align: left;  
+            }
+
+            .ingenieria{
+                width: 100%;
+                text-align: justify;
+            }
         }
     }
-
 }
 
 /* Acá empieza el css de nosotros */
 
 .main__nosotros{
+    height:auto;
 
     .presentacion1{
         .img-box{
@@ -179,7 +197,7 @@
 
             img{
                 width: 100%;
-                position: relative;
+                position: relative
             }
         }
     }
@@ -187,18 +205,17 @@
 
 
     .presentacion2{
-        position: relative;
-        bottom: 0;
-            
-        h1{
-            font-family: $oswald;
-            font-weight: bold;
-            text-align: center;
-            background: none;
-            margin: 10px 0;
-        }
 
         .t-presentacion2{
+
+            h1{
+                font-family: $oswald;
+                font-weight: bold;
+                text-align: center;
+                background: none;
+                margin: 10px 0;
+            }
+
             text-align: center;
         }
     }
@@ -235,7 +252,7 @@
     }
 
     .todos_los_productos{
-        margin: 20px 0;
+        margin: 25px 0;
         display: flex;
         justify-content: center;
 
@@ -249,17 +266,18 @@
     .main__products__s2{
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-around;
+        justify-content: center;
 
 
         .products{
             display: flex;
             flex-direction: column;
-            height:map-get($products, h );
-            width:map-get($products, w );
+            min-width: auto;
+            max-width: 28rem;;
             margin: map-get($products, m );
             border: map-get($products, b );
             border-radius: map-get($products, b-r );
+            padding: .5em;
 
             &:hover{
                 transform: scale(1.02);
@@ -281,7 +299,7 @@
 
             p{
                 text-align: center;
-                padding: 0 40px;
+                padding: 0 30px;
             }
 
 
@@ -308,6 +326,7 @@
                     margin: 0;
                     width: 60px;
                     font-size: 20px;
+                    margin-top: 5px;
                 }
             }
         }

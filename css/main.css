@@ -1,17 +1,4 @@
 @charset "UTF-8";
-/* Aca empiezan las media querys */
-@media only screen and (max-width: 992px) {
-  .nav {
-    display: none;
-  }
-}
-
-@media screen and (max-width: 992px) {
-  .cont-section {
-    width: 100%;
-  }
-}
-
 * {
   padding: 0;
   margin: 0;
@@ -171,6 +158,39 @@
   overflow: auto;
 }
 
+/* Aca empiezan las media querys */
+@media only screen and (max-width: 992px) {
+  .nav {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .footer {
+    height: auto;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .main__services {
+    width: 100%;
+  }
+  .main__services svg {
+    position: absolute;
+    bottom: 280px;
+    width: 100%;
+  }
+  .main__services .services h1 {
+    font-size: 12px;
+  }
+  .main__services .services__container {
+    text-align: justify;
+  }
+  .main__services .services__container h2, .main__services .services__container h3, .main__services .services__container .main__products .main__products__s2 .products .prices, .main__products .main__products__s2 .products .main__services .services__container .prices {
+    font-size: 16px;
+  }
+}
+
 /* <-----Main-----> */
 .main {
   width: 100%;
@@ -258,7 +278,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 75.1vh;
+  height: auto;
 }
 
 .main__services li {
@@ -287,7 +307,7 @@
 }
 
 .main__services .services .services__container h2, .main__services .services .services__container h3, .main__services .services .services__container .main__products .main__products__s2 .products .prices, .main__products .main__products__s2 .products .main__services .services .services__container .prices {
-  margin: 25px 0;
+  margin: 10px 0;
   z-index: 1002;
 }
 
@@ -311,6 +331,7 @@
 
 .main__services .cont-section .equipos {
   position: relative;
+  margin-bottom: 57.7px;
 }
 
 .main__services .cont-section .c-btn {
@@ -320,17 +341,46 @@
 }
 
 @media screen and (max-width: 992px) {
+  .main__services {
+    padding: 1em;
+  }
   .main__services svg {
     position: absolute;
     bottom: 280px;
     width: 100%;
   }
   .main__services .cont-section {
-    width: 90%;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: .5em;
+  }
+  .main__services .cont-section .materiales {
+    width: 100%;
+    text-align: left;
+  }
+  .main__services .cont-section .equipamiento {
+    width: 100%;
+    text-align: left;
+  }
+  .main__services .cont-section .ingenieria {
+    width: 100%;
+    text-align: justify;
   }
 }
 
 /* Acá empieza el css de nosotros */
+.main__nosotros {
+  height: auto;
+}
+
 .main__nosotros .presentacion1 .img-box {
   width: 100%;
   height: auto;
@@ -343,21 +393,16 @@
   position: relative;
 }
 
-.main__nosotros .presentacion2 {
-  position: relative;
-  bottom: 0;
+.main__nosotros .presentacion2 .t-presentacion2 {
+  text-align: center;
 }
 
-.main__nosotros .presentacion2 h1 {
+.main__nosotros .presentacion2 .t-presentacion2 h1 {
   font-family: "Oswald", sans-serif;
   font-weight: bold;
   text-align: center;
   background: none;
   margin: 10px 0;
-}
-
-.main__nosotros .presentacion2 .t-presentacion2 {
-  text-align: center;
 }
 
 /*Acá empieza el css de productos*/
@@ -393,7 +438,7 @@
 }
 
 .main__products .todos_los_productos {
-  margin: 20px 0;
+  margin: 25px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -414,8 +459,9 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .main__products .main__products__s2 .products {
@@ -426,11 +472,12 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  height: 600px;
-  width: 30rem;
+  min-width: auto;
+  max-width: 28rem;
   margin: 10px 10px;
   border: 1px solid #b7b7b7;
   border-radius: 20px;
+  padding: .5em;
 }
 
 .main__products .main__products__s2 .products:hover {
@@ -456,7 +503,7 @@
 
 .main__products .main__products__s2 .products p {
   text-align: center;
-  padding: 0 40px;
+  padding: 0 30px;
 }
 
 .main__products .main__products__s2 .products .prices {
@@ -485,4 +532,5 @@
   margin: 0;
   width: 60px;
   font-size: 20px;
+  margin-top: 5px;
 }
